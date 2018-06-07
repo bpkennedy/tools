@@ -1,0 +1,49 @@
+[user]
+  name = Paul McConnell
+  email = paul.mcconnell@asynchrony.com
+[core]
+  autocrlf = true
+  editor = vim
+  preloadindex = true
+  fscache = true
+[color]
+  ui = true
+[color "diff"]
+  meta = yellow bold
+[push]
+  default = simple
+[alias]
+  ap = add -p
+  f = fetch
+  s = status -s
+  co = checkout
+  cop = checkout -p
+  st = status -sb
+  cf = commit --fixup
+  ci = commit
+  c = commit
+  ca = commit --amend
+  cm = commit -m
+  cp = cherry-pick
+  cpc = cherry-pick --continue
+  cia = commit --amend --no-edit
+  dc = diff --cached
+  edit = !git reset --soft HEAD^ && git reset .
+  p = push -u origin HEAD
+  pf = !git p -f
+  br = branch
+  rc = rebase --continue
+  rhu = !git fetch && git reset --hard @{u}
+  ro = !sh -c 'git rebase --onto $1 $2 $(git rev-parse --abbrev-ref HEAD)' -
+  lg = log --oneline --graph --format=\"%C(yellow)%h %C(auto)%d %C(dim white)%s\"
+[pull]
+  rebase = true
+[branch]
+  autosetuprebase = always
+[rebase]
+  autosquash = true
+  autostash = true
+[stash]
+  showPatch = true
+[gc]
+  auto = 256
